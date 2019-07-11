@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+}
+
+div{
+    padding: 5px;
+}
+
+.mainContainer{
+    width: 100%;
+    overflow: hidden;
+}
+
+.leftMenu, .rightMenu{
+    float: left;
+}
+
+.leftMenu{
+    width: 25%;
+}
+
+.rightMenu{
+    width:75%;
+}
