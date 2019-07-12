@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import "./App.css";
 import dummystore from './dummy-store';
-
+import LeftMenu from './LeftMenu/LeftMenu'
 class App extends Component {
 
   constructor(props){
@@ -25,29 +25,22 @@ class App extends Component {
   render() {
     return (
       <main className='App'>
-        <div>
-          <div>
             <header>
               Noteful
             </header>
-          </div>
           <div className="mainContainer">
-            <div className="leftMenu">
-                {this.state.folders.map(folder => {
-                  return (<div>
-                           {folder.name}
-                          </div>)
-                })}
-            </div>
+            <LeftMenu 
+            folders= {this.state.folders}/>
             <div className="mainContent">
                 {this.state.notes.map(note => {
-                    return (<div>
+                    return (
+                      <div>
                         {note.name}
-                    </div>)
+                      </div>
+                    )
                 })}
             </div>
-          </div>
-        </div>
+            </div>
       </main>
     );
   }
