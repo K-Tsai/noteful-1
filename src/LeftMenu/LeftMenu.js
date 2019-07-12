@@ -3,13 +3,16 @@ import React, { Component } from 'react';
 class LeftMenu extends Component {
   render() {
     return (
-        <div className="leftMenu">
+      <div className="leftMenu">
         {this.props.folders.map(folder => {
-          return (<div>
-                   {folder.name}
-                  </div>)
+          return (
+            <div>
+              {folder.name}
+            </div>
+            )
         })}
-        </div>
+        <button type="button">Add Folder</button>
+      </div>
     );
   }
 }

@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+header {
+    margin-left: 250px;
+    font-size: 20px;
+}
 div{
     padding: 5px;
 }
@@ -11,8 +15,11 @@ div{
     overflow: hidden;
 }
 
-.leftMenu, .rightMenu{
+.leftMenu{
     float: left;
+}
+.rightMenu {
+    float : right;
 }
 
 .leftMenu{
@@ -21,4 +28,9 @@ div{
 
 .rightMenu{
     width:75%;
+}
+
+.note-info{
+    display: flex;
+    flex-direction: column;
 }

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import "./App.css";
 import dummystore from './dummy-store';
 import LeftMenu from './LeftMenu/LeftMenu'
+import RightMenu from './RightMenu/RightMenu'
 class App extends Component {
 
   constructor(props){
@@ -16,31 +17,22 @@ class App extends Component {
 
   componentDidMount(){
     this.setState({
-        folders : dummystore.folders,
-        notes : dummystore.notes
+      folders : dummystore.folders,
+      notes : dummystore.notes
     });
   }
 
 
   render() {
     return (
-      <main className='App'>
-            <header>
-              Noteful
-            </header>
-          <div className="mainContainer">
-            <LeftMenu 
-            folders= {this.state.folders}/>
-            <div className="mainContent">
-                {this.state.notes.map(note => {
-                    return (
-                      <div>
-                        {note.name}
-                      </div>
-                    )
-                })}
-            </div>
-            </div>
+    <main className='App'>
+      <header>
+       <Link to='/'>Noteful</Link> 
+      </header>
+    	<div className="mainContainer">
+        <LeftMenu folders= {this.state.folders}/>
+        <RightMenu notes= {this.state.notes}/>
+      </div>
       </main>
     );
   }
